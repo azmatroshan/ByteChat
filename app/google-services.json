@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "813805206260",
+    "project_id": "bytechat-d79ed",
+    "storage_bucket": "bytechat-d79ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813805206260:android:1c35747b40b5503aedfca1",
+        "android_client_info": {
+          "package_name": "com.azmat.bytechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813805206260-g7ec80mccljoisk952djgrq1un95hbks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.azmat.bytechat",
+            "certificate_hash": "43000b2d46c86f885ca431da2ab3bbd64c63ee0b"
+          }
+        },
+        {
+          "client_id": "813805206260-e7g6mko1tt5jb9v5ckfe0i0mglkn5buh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsn-m2Jn9ASEtwkwXiaBzpafRbzWaSF5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813805206260-e7g6mko1tt5jb9v5ckfe0i0mglkn5buh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
