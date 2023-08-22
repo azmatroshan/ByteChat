@@ -1,7 +1,7 @@
 package com.azmat.bytechat
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.azmat.bytechat.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

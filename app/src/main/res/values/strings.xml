@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ByteChat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_image">login image</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="please_confirm_your_country_code_and_enter_your_phone_number">Please confirm your country code and enter your phone number</string>
+    <string name="phone_number">Phone number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="enter_your_otp">Enter your OTP</string>
+    <string name="verify">Verify</string>
 </resources>
