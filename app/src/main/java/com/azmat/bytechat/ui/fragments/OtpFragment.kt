@@ -1,4 +1,4 @@
-package com.azmat.bytechat.login.fragment
+package com.azmat.bytechat.ui.fragments
 
 import android.os.Bundle
 import android.util.Log

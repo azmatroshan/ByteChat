@@ -1,4 +1,4 @@
-package com.azmat.bytechat.login.fragment
+package com.azmat.bytechat.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.azmat.bytechat.databinding.FragmentLoginBinding
-import com.azmat.bytechat.login.LoginViewModel
+import com.azmat.bytechat.viewmodels.LoginViewModel
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/primaryColor"
-    tools:context=".login.fragment.LoginFragment">
+    tools:context=".ui.fragments.LoginFragment">
 
     <ImageView
         android:layout_width="120dp"
@@ -46,7 +46,8 @@
             android:id="@+id/countryCodePicker"
             android:layout_width="wrap_content"
             app:ccp_autoDetectCountry="true"
-            android:background="@drawable/country_code_bg"
+            app:ccp_rememberLastSelection="true"
+            android:background="@drawable/bg_country_code"
             android:layout_height="42dp"
             android:layout_gravity="bottom"
             app:ccp_defaultNameCode="IN" />

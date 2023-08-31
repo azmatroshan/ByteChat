@@ -1,4 +1,4 @@
-package com.azmat.bytechat.login
+package com.azmat.bytechat.repositories
 
 import androidx.fragment.app.FragmentActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +18,10 @@ class LoginRepository {
             .setCallbacks(callback)
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
+    }
+
+    fun logout() {
+        auth.signOut()
     }
 
 }

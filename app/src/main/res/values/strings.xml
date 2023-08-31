@@ -9,4 +9,11 @@
     <string name="send_otp">Send OTP</string>
     <string name="enter_your_otp">Enter your OTP</string>
     <string name="verify">Verify</string>
+    <string name="search">Search</string>
+    <string name="log_out">Log out</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="_12_00">12:00</string>
+    <string name="chat_with_anyone">Chat with anyone</string>
+    <string name="user_profile_picture">user_profile_picture</string>
 </resources>

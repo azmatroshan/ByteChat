@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.azmat.bytechat.login.fragment.LoginFragment"
+        android:name="com.azmat.bytechat.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.azmat.bytechat.login.fragment.OtpFragment"
+        android:name="com.azmat.bytechat.ui.fragments.OtpFragment"
         android:label="fragment_otp"
         tools:layout="@layout/fragment_otp" >
         <action
@@ -40,12 +40,13 @@
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.azmat.bytechat.ChatFragment"
+        android:name="com.azmat.bytechat.ui.fragments.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" >
         <action
             android:id="@+id/action_chatFragment_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpToInclusive="false" />
+            app:popUpTo="@id/chatFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
