@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/messageItem"
+    android:layout_marginVertical="1dp"
+    android:layout_marginHorizontal="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="UseCompoundDrawables">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/figtree_regular"
+        android:text="@string/received_message"
+        android:maxWidth="280dp"
+        android:padding="12dp"
+        android:layout_marginHorizontal="8dp"
+        android:textSize="18sp"
+        android:background="@drawable/bg_message_received"/>
+    <ImageView
+        android:id="@+id/corner"
+        android:layout_marginTop="-16dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/corner_received"
+        android:contentDescription="@string/message" />
+
+</LinearLayout>

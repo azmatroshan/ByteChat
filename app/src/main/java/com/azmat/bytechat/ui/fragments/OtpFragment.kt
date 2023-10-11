@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package com.azmat.bytechat.ui.fragments
 
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,6 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.azmat.bytechat.databinding.FragmentOtpBinding
+import com.azmat.bytechat.utils.buildDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
@@ -17,6 +21,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 class OtpFragment : Fragment() {
     private lateinit var binding: FragmentOtpBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var dialog: ProgressDialog
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +33,8 @@ class OtpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.pinview.requestFocus()
 
         auth = FirebaseAuth.getInstance()
         var verificationId: String? = null
@@ -42,6 +49,8 @@ class OtpFragment : Fragment() {
             }
             else if(!verificationId.isNullOrEmpty()){
                 val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
+                dialog = buildDialog(requireContext(), "Verifying OTP")
+                dialog.show()
                 signInWithPhoneAuthCredential(credential)
             }else{
                 Toast.makeText(requireContext(), "Some error occurred", Toast.LENGTH_SHORT).show()
@@ -53,7 +62,8 @@ class OtpFragment : Fragment() {
         auth.signInWithCredential(credential).addOnCompleteListener(requireActivity()) { task ->
             if (task.isSuccessful) {
                 Log.d(TAG, "signInWithCredential:success")
-                findNavController().navigate(OtpFragmentDirections.actionOtpFragmentToChatFragment())
+                dialog.dismiss()
+                findNavController().navigate(OtpFragmentDirections.actionOtpFragmentToProfileFragment())
             } else {
                 Log.w(TAG, "signInWithCredential:failure", task.exception)
                 if (task.exception is FirebaseAuthInvalidCredentialsException) {

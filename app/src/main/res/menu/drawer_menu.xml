@@ -2,8 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/drawer_log_out"
-        android:title="@string/log_out"
-        android:icon="@drawable/ic_log_out"
+    <item android:id="@+id/source_code"
+        android:title="@string/source_code"
+        android:icon="@drawable/ic_github"
         />
+
+    <item android:id="@+id/share_app"
+        android:title="@string/share_app"
+        android:icon="@drawable/ic_share"
+        />
+
+    <item android:title="@string/settings">
+        <menu>
+            <item android:id="@+id/update_profile"
+                android:title="@string/update_profile"
+                android:icon="@drawable/ic_edit"
+                />
+
+            <item android:id="@+id/drawer_log_out"
+                android:title="@string/log_out"
+                android:icon="@drawable/ic_log_out"
+                />
+        </menu>
+    </item>
 </menu>

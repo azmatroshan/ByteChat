@@ -1,10 +1,13 @@
 package com.azmat.bytechat.models
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class User(
-    val id:String="",
+    var id:String="",
     val name:String="",
-    val email:String="",
-    val lastMessage:String="",
-    val lastSeen:String="",
-    val imgProfile:String=""
-)
+    val phone:String="",
+    val imgProfile:String="",
+    val fcmToken: String=""
+): Parcelable

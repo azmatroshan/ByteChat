@@ -49,6 +49,7 @@
             app:ccp_rememberLastSelection="true"
             android:background="@drawable/bg_country_code"
             android:layout_height="42dp"
+            app:ccp_showNameCode="false"
             android:layout_gravity="bottom"
             app:ccp_defaultNameCode="IN" />
 

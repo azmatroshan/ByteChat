@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C0E4F4"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.MessageFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/onPrimary"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/navigate_up"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_navigate_up"
+                android:background="@drawable/click_ripple_circle"
+                 />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/grey"
+                android:src="@drawable/img_profile"
+                app:shapeAppearanceOverlay="@style/circularImageViewShape"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/figtree_semi_bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:text="@string/user"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/received_message_item"
+        android:layout_weight="1"
+        app:stackFromEnd="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginVertical="4dp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_message_text_field"
+            android:fontFamily="@font/figtree_regular"
+            android:gravity="center_vertical"
+            android:hint="@string/message"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:isScrollContainer="true"
+            android:maxLines="4"
+            android:minHeight="48dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHint="#00838F"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/bg_send_icon"
+            android:contentDescription="@string/send_message_btn"
+            android:src="@drawable/ic_send"
+            tools:ignore="ImageContrastCheck" />
+        
+    </LinearLayout>
+    
+</LinearLayout>
